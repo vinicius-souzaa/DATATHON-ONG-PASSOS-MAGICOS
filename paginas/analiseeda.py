@@ -169,7 +169,7 @@ with st.container():
                          , divider='red')
         
         # Carregar os datasets a partir da pasta
-        df_modelo = pd.read_csv('dataframe/df_modelo.csv', sep=';')
+        df_modelo = pd.read_csv('dataframe/DF_MODELO.csv', sep=';')
         # Lista de indicadores para boxplot
         indicadores = ['INDE', 'IAA', 'IEG', 'IPS', 'IDA', 'IPP', 'IPV', 'IAN']
 
@@ -639,8 +639,18 @@ with st.container():
                     buttons.append(dict(
                         method='update',
                         label=indicator,
-                        args=[{'visible': [False] * len(fig.data)},  # Oculta todos os traces
-                            {'title': f'Indicador: {indicator} (Masculino vs Feminino)'}]  # Atualiza o título
+                        args=[
+                            {'visible': [False] * len(fig.data)},  # Oculta todos os traces
+                            {
+                                'title': {
+                                    'text': f'Indicador: {indicator} (Masculino vs Feminino)',
+                                    'font': {
+                                        'color': '#000000',  # Cor preta após seleção
+                                        'size': 10
+                                    }
+                                }
+                            }
+                        ]  # Atualiza o título
                     ))
 
                     # Mostra os traces correspondentes ao indicador selecionado
@@ -657,7 +667,13 @@ with st.container():
                         'bordercolor': '#708090',  # Cor da borda
                         'font': {'color': '#708090'}  # Cor da fonte
                     }],
-                    title='Clique no Dropdown para selecionar o indicador desejado',
+                    title={
+                        'text': 'Clique no Dropdown para selecionar o indicador desejado',
+                        'font': {
+                            'color': '#FF6347',  # Cor do título (neste exemplo, vermelho claro)
+                            'size': 20  # Tamanho da fonte do título
+                        }
+                    },
                     xaxis_title='Ano',
                     yaxis_title='Média dos Indicadores',
                     template='plotly_white',
@@ -801,7 +817,17 @@ with st.container():
                                 dict(label=f"{year}",
                                     method="update",
                                     args=[{"visible": [j // len(indicators) == year_idx for j in range(len(indicators) * len(years))]},  # Mostrar todos os indicadores do ano correspondente
-                                        {"title": f'Média dos Indicadores de Desempenho por Idade em {year}'}]) 
+                                        {"title": f'Média dos Indicadores de Desempenho por Idade em {year}',
+                                        
+                                        'font': {
+                                            'color': '#000000',  # Cor preta após seleção
+                                            'size': 10
+                                        }
+                                }
+                                        
+                                        
+                                        
+                                        ]) 
                                 for year_idx, year in enumerate(years)
                             ],
                             direction="down",
@@ -1576,9 +1602,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
-            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
-            tbaluno = load_data('dataframe/TbAluno.csv')
+            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
+            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
+            tbaluno = load_data('dataframe/tbaluno.csv')
 
             # 1. Fazer o merge entre TbMotivoInativacao e TbAlunoTurma pelo IdMotivoInativacao
             tb_aluno_turma = pd.merge(tbalunoturma, tbmotivoinativacao[['IdMotivoInativacao', 'MotivoInativacao']], 
@@ -1679,9 +1705,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
-            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
-            tbaluno = load_data('dataframe/TbAluno.csv')
+            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
+            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
+            tbaluno = load_data('dataframe/tbaluno.csv')
 
             # Contagem dos motivos de inativação por gênero
             motivos_genero_count = tb_aluno.groupby(['MotivoInativacao', 'Sexo'])['IdAluno'].count().reset_index(name='Total')
@@ -1765,9 +1791,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
-            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
-            tbaluno = load_data('dataframe/TbAluno.csv')
+            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
+            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
+            tbaluno = load_data('dataframe/tbaluno.csv')
 
             # Passo 1: Merge entre `TbAluno` e `tb_aluno_turma` para trazer o IdMotivoInativacao
             tb_aluno_merged = pd.merge(tbaluno, tbalunoturma[['IdAluno', 'IdMotivoInativacao']], on='IdAluno', how='left')
