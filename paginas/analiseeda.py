@@ -646,7 +646,7 @@ with st.container():
                                     'text': f'Indicador: {indicator} (Masculino vs Feminino)',
                                     'font': {
                                         'color': '#000000',  # Cor preta após seleção
-                                        'size': 10
+                                        'size': 20
                                     }
                                 }
                             }
@@ -821,7 +821,7 @@ with st.container():
                                         
                                         'font': {
                                             'color': '#000000',  # Cor preta após seleção
-                                            'size': 10
+                                            'size': 20
                                         }
                                 }
                                         
