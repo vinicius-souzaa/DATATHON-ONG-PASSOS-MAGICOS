@@ -169,7 +169,7 @@ with st.container():
                          , divider='red')
         
         # Carregar os datasets a partir da pasta
-        df_modelo = pd.read_csv('dataframe/DF_MODELO.csv', sep=';')
+        df_modelo = pd.read_csv('dataframe/df_modelo.csv', sep=';')
         # Lista de indicadores para boxplot
         indicadores = ['INDE', 'IAA', 'IEG', 'IPS', 'IDA', 'IPP', 'IPV', 'IAN']
 
@@ -1602,9 +1602,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
-            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
-            tbaluno = load_data('dataframe/tbaluno.csv')
+            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
+            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
+            tbaluno = load_data('dataframe/TbAluno.csv')
 
             # 1. Fazer o merge entre TbMotivoInativacao e TbAlunoTurma pelo IdMotivoInativacao
             tb_aluno_turma = pd.merge(tbalunoturma, tbmotivoinativacao[['IdMotivoInativacao', 'MotivoInativacao']], 
@@ -1705,9 +1705,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
-            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
-            tbaluno = load_data('dataframe/tbaluno.csv')
+            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
+            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
+            tbaluno = load_data('dataframe/TbAluno.csv')
 
             # Contagem dos motivos de inativação por gênero
             motivos_genero_count = tb_aluno.groupby(['MotivoInativacao', 'Sexo'])['IdAluno'].count().reset_index(name='Total')
@@ -1791,9 +1791,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
-            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
-            tbaluno = load_data('dataframe/tbaluno.csv')
+            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
+            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
+            tbaluno = load_data('dataframe/TbAluno.csv')
 
             # Passo 1: Merge entre `TbAluno` e `tb_aluno_turma` para trazer o IdMotivoInativacao
             tb_aluno_merged = pd.merge(tbaluno, tbalunoturma[['IdAluno', 'IdMotivoInativacao']], on='IdAluno', how='left')
