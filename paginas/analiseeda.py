@@ -1576,9 +1576,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
-            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
-            tbaluno = load_data('dataframe/tbaluno.csv')
+            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
+            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
+            tbaluno = load_data('dataframe/TbAluno.csv')
 
             # 1. Fazer o merge entre TbMotivoInativacao e TbAlunoTurma pelo IdMotivoInativacao
             tb_aluno_turma = pd.merge(tbalunoturma, tbmotivoinativacao[['IdMotivoInativacao', 'MotivoInativacao']], 
