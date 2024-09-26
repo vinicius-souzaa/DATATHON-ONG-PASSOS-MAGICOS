@@ -1679,9 +1679,9 @@ with st.container():
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
             df_2022 = load_data('dataframe/df_2022.csv')
-            tbmotivoinativacao = load_data('dataframe/tbmotivoinativacao.csv')
-            tbalunoturma = load_data('dataframe/tbalunoturma.csv')  
-            tbaluno = load_data('dataframe/tbaluno.csv')
+            tbmotivoinativacao = load_data('dataframe/TbMotivoInativacao.csv')
+            tbalunoturma = load_data('dataframe/TbAlunoTurma.csv')  
+            tbaluno = load_data('dataframe/TbAluno.csv')
 
             # Contagem dos motivos de inativação por gênero
             motivos_genero_count = tb_aluno.groupby(['MotivoInativacao', 'Sexo'])['IdAluno'].count().reset_index(name='Total')
