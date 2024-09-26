@@ -169,7 +169,7 @@ with st.container():
                          , divider='red')
         
         # Carregar os datasets a partir da pasta
-        df_modelo = pd.read_csv('dataframe/DF_MODELO.csv', sep=';')
+        df_modelo = pd.read_csv('dataframe/df_modelo.csv', sep=';')
         # Lista de indicadores para boxplot
         indicadores = ['INDE', 'IAA', 'IEG', 'IPS', 'IDA', 'IPP', 'IPV', 'IAN']
 
