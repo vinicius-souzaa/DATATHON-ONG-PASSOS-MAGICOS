@@ -23,7 +23,7 @@ with st.container():
     
     st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")
 
-    st.header(":red[Abordagem e Ferramentas 📚]", divider='red')
+    st.header(":blue[Abordagem e Ferramentas 📚]", divider='blue')
     
     st.markdown("""
                 <style>
@@ -58,8 +58,8 @@ with st.container():
     )
 
     with tab0:
-        st.subheader(':red[Metodologia]'
-                         , divider='red')
+        st.subheader(':blue[Metodologia]'
+                         , divider='blue')
         st.markdown("""
     <style>
     p.special-indent {
@@ -117,8 +117,8 @@ with st.container():
         
     
     with tab1:
-        st.subheader(':red[Ferramentas]'
-                        , divider='red')
+        st.subheader(':blue[Ferramentas]'
+                        , divider='blue')
         with st.expander("Python"):
             st.markdown("""
                         <style>
