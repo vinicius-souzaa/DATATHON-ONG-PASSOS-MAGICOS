@@ -16,7 +16,7 @@ with st.container():
                     body="""
                         <style>
                             .block-container{
-                                    padding-top: 25px;
+                                    padding-top: 45px;
                                 }
                         </style>
                     """, 
@@ -27,7 +27,7 @@ with st.container():
 
     with col1:
         st.markdown("""
-                <h1 style='white-space: nowrap; color: red;'>
+                <h1 style='white-space: nowrap; color: blue;'>
                     ONG - PASSOS MAGICOS 🌍
                 </h1>
             """, unsafe_allow_html=True)
@@ -37,8 +37,8 @@ with st.container():
 
     
     
-    st.subheader(':red[Historia]'
-                        , divider='red')
+    st.subheader(':blue[Historia]'
+                        , divider='blue')
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -65,8 +65,8 @@ with st.container():
     
 
 
-    st.subheader(':red[Missão e Valores]'
-                    , divider='red')
+    st.subheader(':blue[Missão e Valores]'
+                    , divider='blue')
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -104,8 +104,8 @@ with st.container():
     
 
 
-    st.subheader(':red[Impacto na Comunidade]'
-                    , divider='red')
+    st.subheader(':blue[Impacto na Comunidade]'
+                    , divider='blue')
     st.markdown("""
                 <style>
                 p.special-indent {
