@@ -7,13 +7,11 @@ def format_number(number, format='%0.0f'):
     return locale.format(format, number, grouping=True)
 
 def layout_saida():
-
-    
-    
+       
     show_pages(
         [
             Page("./main.py", "Datathon", "🛠️"),
-            Page("./paginas/ONG.py","ONG Passos Magicos", "📰"),
+            Page("./paginas/ONG.py","ONG Passos Magicos", "🌍"),
             Page("./paginas/abordagemferramentas.py","Abordagem e Ferramentas", "📚"),
             Page("./paginas/analiseeda.py","Analise Exploratória de Dados", "📊"),
             Page("./paginas/modelo.py", "Modelo Preditivo", "💻"),
