@@ -1378,7 +1378,7 @@ with st.container():
 
             # Atualizar layout do gráfico
             fig.update_layout(
-                #title_text='Movimentos de Alunos Entre as Pedras (2020-2021 e 2021-2022)',
+                title_text='Movimentos de Alunos Entre as Pedras (2020-2021 e 2021-2022)',
                 #title_x=0.5,
                 xaxis_title='Ano',
                 yaxis_title='Quantidade de Alunos',
