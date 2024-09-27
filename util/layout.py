@@ -22,7 +22,7 @@ def layout_saida():
     st.markdown("""
                 <style>
                     [data-testid=stSidebar] {
-                        background-color: #ff000050;
+                        background-color: #B0C4DE;
                     }
                 </style>
                 """, unsafe_allow_html=True)
