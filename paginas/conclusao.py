@@ -9,6 +9,16 @@ st.set_page_config(
 layout_saida()
 
 with st.container():
+    st.markdown(
+                    body="""
+                        <style>
+                            .block-container{
+                                    padding-top: 25px;
+                                }
+                        </style>
+                    """, 
+                    unsafe_allow_html=True
+                )
     st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")   
     st.header(":blue[Conclusão]", divider="blue")
     st.markdown("""
