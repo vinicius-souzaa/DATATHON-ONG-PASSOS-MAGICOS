@@ -26,6 +26,16 @@ def layout_saida():
                     }
                 </style>
                 """, unsafe_allow_html=True)
+    st.markdown(
+                """
+                <style>
+                [data-testid="stSidebarNavItems"] {
+                    max-height: none;
+                }
+               </style>
+               """,
+                unsafe_allow_html=True
+            )
         
     with st.sidebar:
         st.subheader("Alunos - Grupo 22 - Turma 3DTAT")
