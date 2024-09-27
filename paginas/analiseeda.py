@@ -23,7 +23,7 @@ with st.container():
 
     st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")   
     
-    st.header(":red[Analise Exploratória de Dados (EDA) 📊]", divider='red')
+    st.header(":blue[Analise Exploratória de Dados (EDA) 📊]", divider='blue')
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -62,8 +62,8 @@ with st.container():
     
     with st.expander("Analise Descritiva"):
 
-        st.subheader(':red[Analise Descritiva]'
-                         , divider='red')
+        st.subheader(':blue[Analise Descritiva]'
+                         , divider='blue')
         st.markdown("""
                     <style>
                     p.special-indent {
@@ -141,8 +141,8 @@ with st.container():
         
         
     with st.expander("Analise de Outliers (Boxplot)"):
-        st.subheader(':red[Boxplot dos Indicadores por Ano]'
-                         , divider='red')
+        st.subheader(':blue[Boxplot dos Indicadores por Ano]'
+                         , divider='blue')
         
         def load_data(file_path):
                 return pd.read_csv(file_path, sep=',', decimal='.')
@@ -437,7 +437,7 @@ with st.container():
         tabs = st.tabs(indicators)
         for tab, indicator in zip(tabs, indicators):
             with tab:
-                st.subheader(f':red[Histograma {indicator}]',divider='red')
+                st.subheader(f':blue[Histograma {indicator}]',divider='blue')
                 fig = make_subplots(rows=1, cols=3, subplot_titles=[f'{indicator} {year}' for year in years])
                 for df, year, color in zip(dfs, years, colors):
                     fig.add_trace(create_histogram(df, indicator, year, color), row=1, col=years.index(year) + 1)
@@ -456,8 +456,8 @@ with st.container():
             ]
         )
         with tab14:
-            st.subheader(':red[Medias de Indicadores de Por Ano]'
-                            , divider='red')
+            st.subheader(':blue[Medias de Indicadores de Por Ano]'
+                            , divider='blue')
             
             # Função para calcular médias corrigidas de indicadores
             def calculate_mean_by_year(indicators_dict):
@@ -542,8 +542,8 @@ with st.container():
 
             
         with tab15:
-            st.subheader(':red[Medias de Indicadores de Por Genero]'
-                            , divider='red')
+            st.subheader(':blue[Medias de Indicadores de Por Genero]'
+                            , divider='blue')
             
             # Função para calcular a média por indicador e sexo em cada ano
             def calculate_mean_by_gender_per_year(df, year, indicators):
@@ -690,7 +690,7 @@ with st.container():
 
             
         with tab16:
-            st.subheader(':red[Medias de Indicadores por Idade]', divider='red')
+            st.subheader(':blue[Medias de Indicadores por Idade]', divider='blue')
             
             df_2020 = load_and_convert_data('dataframe/df_2020.csv')
             df_2021 = load_and_convert_data('dataframe/df_2021.csv')
@@ -840,8 +840,8 @@ with st.container():
             ]
         )
         with tab0:
-            st.subheader(':red[Analise dos Tipos de Pedras Por Ano]'
-                            , divider='red')
+            st.subheader(':blue[Analise dos Tipos de Pedras Por Ano]'
+                            , divider='blue')
             
             def load_data(file_path):
                 return pd.read_csv(file_path, sep=',', decimal='.')
@@ -959,8 +959,8 @@ with st.container():
 
 
         with tab1:
-            st.subheader(':red[Analise dos Tipos de Pedras Totais por Genero ]'
-                            , divider='red')
+            st.subheader(':blue[Analise dos Tipos de Pedras Totais por Genero ]'
+                            , divider='blue')
             
             # Load and preprocess the data
             df_2020 = load_data('dataframe/df_2020.csv')
@@ -1094,8 +1094,8 @@ with st.container():
 
             
         with tab2:
-            st.subheader(':red[Analise dos Tipos de Pedras por Idade]'
-                            , divider='red')
+            st.subheader(':blue[Analise dos Tipos de Pedras por Idade]'
+                            , divider='blue')
             
             # Função para carregar os dados
             def load_data(filepath):
@@ -1290,8 +1290,8 @@ with st.container():
 
 
         with tab3:
-            st.subheader(':red[Transicao de Pedras a cada Ano]'
-                            , divider='red')
+            st.subheader(':blue[Transicao de Pedras a cada Ano]'
+                            , divider='blue')
             
             # Função para carregar os dados
             def load_data(filepath):
@@ -1478,8 +1478,8 @@ with st.container():
             ]
         )
         with tab17:
-            st.subheader(':red[Motivos de Evasao]'
-                            , divider='red')
+            st.subheader(':blue[Motivos de Evasao]'
+                            , divider='blue')
             # Carregar os dados
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
@@ -1574,8 +1574,8 @@ with st.container():
 
 
         with tab18:
-            st.subheader(':red[Por Generos]'
-                            , divider='red')
+            st.subheader(':blue[Por Generos]'
+                            , divider='blue')
             # Carregar os dados
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
@@ -1645,8 +1645,8 @@ with st.container():
 
 
         with tab19:
-            st.subheader(':red[Por Idade]'
-                            , divider='red')
+            st.subheader(':blue[Por Idade]'
+                            , divider='blue')
             # Carregar os dados
             df_2020 = load_data('dataframe/df_2020.csv')
             df_2021 = load_data('dataframe/df_2021.csv')
@@ -1730,16 +1730,16 @@ with st.container():
     with st.expander("Quantidade de Alunos que Melhoraram ou Pioraram nos Indices por Ano"):
         
         tab5,tab6,tab7= st.tabs(
-        tabs=[
-            "2020-2021", 
-            "2021-2022",
-            "2020-2022"          
-            ]
-        )
+                                tabs=[
+                                    "2020-2021", 
+                                    "2021-2022",
+                                    "2020-2022"          
+                                    ]
+                                )
         
         with tab5:
-            st.subheader(':red[2020-2021]'
-                            , divider='red')
+            st.subheader(':blue[2020-2021]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -1892,8 +1892,8 @@ with st.container():
 
         
         with tab6:
-            st.subheader(':red[2021-2022]'
-                            , divider='red')
+            st.subheader(':blue[2021-2022]'
+                            , divider='blue')
             
             # Função para carregar os dados
             def load_data(filepath):
@@ -2044,8 +2044,8 @@ with st.container():
 
             
         with tab7:
-            st.subheader(':red[2020-2022]'
-                            , divider='red')
+            st.subheader(':blue[2020-2022]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2208,8 +2208,8 @@ with st.container():
         )
         
         with tab8:
-            st.subheader(':red[2020-2021]'
-                            , divider='red')
+            st.subheader(':blue[2020-2021]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2316,8 +2316,8 @@ with st.container():
 
             
         with tab9:
-            st.subheader(':red[2021-2022]'
-                            , divider='red')
+            st.subheader(':blue[2021-2022]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2420,8 +2420,8 @@ with st.container():
 
 
         with tab10:
-            st.subheader(':red[2020-2022]'
-                            , divider='red')
+            st.subheader(':blue[2020-2022]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2541,8 +2541,8 @@ with st.container():
         )
         
         with tab11:
-            st.subheader(':red[Desempenho]'
-                            , divider='red')
+            st.subheader(':blue[Desempenho]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2631,8 +2631,8 @@ with st.container():
 
         
         with tab12:
-            st.subheader(':red[Pontos de Virada]'
-                            , divider='red')
+            st.subheader(':blue[Pontos de Virada]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
@@ -2722,8 +2722,8 @@ with st.container():
 
         
         with tab13:
-            st.subheader(':red[Correlacao]'
-                            , divider='red')
+            st.subheader(':blue[Correlacao]'
+                            , divider='blue')
             
 
             # Função para carregar os dados
