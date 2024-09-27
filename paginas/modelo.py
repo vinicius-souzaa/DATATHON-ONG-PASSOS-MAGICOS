@@ -10,8 +10,8 @@ layout_saida()
 
 with st.container():
     st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")   
-    st.header(":red[Prevendo o Índice de Desenvolvimento Educacional] 💻")
-    st.subheader(f":red[Objetivo]", divider="red")
+    st.header(":blue[Prevendo o Índice de Desenvolvimento Educacional] 💻")
+    st.subheader(f":blue[Objetivo]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -29,7 +29,7 @@ with st.container():
                 </p>
                 """, unsafe_allow_html=True)
 
-    st.subheader(f":red[Metodologia]", divider="red")
+    st.subheader(f":blue[Metodologia]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -79,7 +79,7 @@ with st.container():
                 </p>
                 """, unsafe_allow_html=True)
 
-    st.subheader(f":red[Desempenho do Modelo]", divider="red")
+    st.subheader(f":blue[Desempenho do Modelo]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -117,7 +117,7 @@ with st.container():
                 </p>
                 """, unsafe_allow_html=True)
 
-    st.subheader(f":red[Testes com Outras Variáveis]", divider="red")
+    st.subheader(f":blue[Testes com Outras Variáveis]", divider="blue")
     
     st.markdown("""
                 <style>
@@ -160,7 +160,7 @@ with st.container():
                 """, unsafe_allow_html=True)
 
         
-    st.subheader(f":red[Insights Gerados pelo Modelo]", divider="red")
+    st.subheader(f":blue[Insights Gerados pelo Modelo]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -190,7 +190,7 @@ with st.container():
                 """, unsafe_allow_html=True)
 
     
-    st.subheader(f":red[Sugestões de Melhoria]", divider="red")
+    st.subheader(f":blue[Sugestões de Melhoria]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
@@ -220,7 +220,7 @@ with st.container():
                 """, unsafe_allow_html=True)
 
     
-    st.subheader(f":red[Conclusão sobre o Modelo]", divider="red")
+    st.subheader(f":blue[Conclusão sobre o Modelo]", divider="blue")
     st.markdown("""
                 <style>
                 p.special-indent {
