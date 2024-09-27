@@ -1942,8 +1942,8 @@ with st.container():
             ]
 
             # Criar a figura para 2021-2022
-            fig_2022 = go.Figure(data=traces_2022)
-            fig_2022.update_layout(
+            fig = go.Figure(data=traces_2022)
+            fig.update_layout(
                 title='Quantidade de Alunos que Melhoraram ou Pioraram nos Indices (2021-2022)',
                 xaxis_title='Indicador',
                 yaxis_title='Quantidade de Alunos',
@@ -2094,8 +2094,8 @@ with st.container():
             ]
 
             # Criar a figura para 2020-2022
-            fig_2020_2022 = go.Figure(data=traces_2020_2022)
-            fig_2020_2022.update_layout(
+            fig = go.Figure(data=traces_2020_2022)
+            fig.update_layout(
                 title='Quantidade de Alunos que Melhoraram ou Pioraram (2020-2022)',
                 xaxis_title='Indicador',
                 yaxis_title='Quantidade de Alunos',
