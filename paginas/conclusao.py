@@ -10,7 +10,7 @@ layout_saida()
 
 with st.container():
     st.html("<style>[data-testid='stHeaderActionElements'] {display: none;}</style>")   
-    st.header(":red[Conclusão]", divider="red")
+    st.header(":blue[Conclusão]", divider="blue")
     st.markdown("""
     <style>
     p.special-indent {
